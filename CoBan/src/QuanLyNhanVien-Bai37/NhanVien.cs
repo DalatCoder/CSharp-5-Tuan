@@ -10,10 +10,10 @@ namespace QuanLyNhanVien_Bai37
         public NhanVien()
         {
             MaNhanVien = 0;
-            TenNhanVien = "Untitle";
+            TenNhanVien = "Unnamed";
             NgaySinh = new DateTime(1990, 1, 1);
             ChucVu = LoaiChucVu.NHAN_VIEN;
-            TenPhongBan = "Untitle";
+            TenPhongBan = "Untitled";
         }
 
         public int MaNhanVien { get; set; }
@@ -52,6 +52,7 @@ namespace QuanLyNhanVien_Bai37
             sb.AppendLine($"Ten nhan vien: {this.TenNhanVien}");
             sb.AppendLine($"Ngay thang nam sinh: {this.NgaySinh:D}");
             sb.AppendLine($"Phong ban: {this.TenPhongBan}");
+            sb.AppendLine($"Chuc vu: {this.ChucVu}");
             sb.AppendLine($"Tien luong: {this.TinhLuong}");
             return sb.ToString();
         }

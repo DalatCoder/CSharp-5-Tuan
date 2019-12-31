@@ -12,7 +12,7 @@ namespace QuanLyNhanVien_Bai37
         {
             _danhSachNhanVien = new List<NhanVien>();
             MaPhongBan = 0;
-            TenPhongBan = "Untitle";
+            TenPhongBan = "Untitled";
             TruongPhong = new NhanVien();
         }
 
