@@ -75,15 +75,20 @@ namespace TuDienAnhViet_Bai27
         private static string Retrieve(string key)
         {
             string lowerKey = key.ToLower();
-            if (!dics.ContainsKey(key))
-                throw new KeyNotFoundException($"Khong tim thay tu {key} trong tu dien");
+
+            if (!dics.ContainsKey(lowerKey))
+                throw new KeyNotFoundException($"Khong tim thay tu {ToiUuTu(lowerKey)} trong tu dien");
             else
             {
-                string value = dics[key];
-                char[] str = value.ToCharArray();
-                str[0] = char.ToUpper(str[0]);
-                return new string(str);
+                return dics[lowerKey];
             }
+        }
+
+        private static string ToiUuTu(string str)
+        {
+            var strArr = str.ToCharArray();
+            strArr[0] = char.ToUpper(strArr[0]);
+            return new string(strArr);
         }
 
         private static void XoaTu()
@@ -95,8 +100,8 @@ namespace TuDienAnhViet_Bai27
 
             Retrieve(key);
 
-            dics.Remove(key);
-            Console.WriteLine($"Da xoa tu {key} ra khoi tu dien.");
+            dics.Remove(key.ToLower());
+            Console.WriteLine($"Da xoa tu {ToiUuTu(key)} ra khoi tu dien.");
         }
 
         private static void TraCuu()
@@ -107,7 +112,7 @@ namespace TuDienAnhViet_Bai27
             key = Console.ReadLine();
 
             string value = Retrieve(key);
-            Console.WriteLine($"Nghia cua tu {key} la {value}");
+            Console.WriteLine($"Nghia cua tu {ToiUuTu(key)} la {ToiUuTu(value)}");
         }
 
         private static void SuaTu()
@@ -120,7 +125,7 @@ namespace TuDienAnhViet_Bai27
 
             Retrieve(key);
 
-            Console.Write($"Nhap nghia tieng Viet moi cua tu {key}: ");
+            Console.Write($"Nhap nghia tieng Viet moi cua tu {ToiUuTu(key)}: ");
             value = Console.ReadLine();
 
             Save(key, value, true);
