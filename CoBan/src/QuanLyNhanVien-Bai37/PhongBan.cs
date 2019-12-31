@@ -58,5 +58,14 @@ namespace QuanLyNhanVien_Bai37
             }
             return null;
         }
+
+        public bool XoaNhanVien(int maNV)
+        {
+            var nv = TimNhanVien(maNV);
+            if (nv == null) return false;
+
+            _danhSachNhanVien.Remove(nv);
+            return true;
+        }
     }
 }
