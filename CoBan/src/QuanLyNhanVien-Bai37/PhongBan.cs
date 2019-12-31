@@ -48,5 +48,15 @@ namespace QuanLyNhanVien_Bai37
                 Console.WriteLine(nhanVien);
             }
         }
+
+        public NhanVien TimNhanVien(int maNV)
+        {
+            foreach (var nhanVien in this._danhSachNhanVien)
+            {
+                if (nhanVien.MaNhanVien == maNV)
+                    return nhanVien;
+            }
+            return null;
+        }
     }
 }

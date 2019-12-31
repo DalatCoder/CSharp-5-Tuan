@@ -33,6 +33,11 @@ namespace QuanLyNhanVien_Bai37
             }
         }
 
+        static void Main(string[] args)
+        {
+            TestQLNS();
+        }
+
         private static void ThemNhanVienPhongKeToan(PhongBan phongKeToan)
         {
             var nv1 = new NhanVien()
@@ -59,11 +64,6 @@ namespace QuanLyNhanVien_Bai37
 
             for (int i = 0; i < 5; i++)
                 phongNhanSu.ThemNhanVien(new NhanVien() { MaNhanVien = i });
-        }
-
-        static void Main(string[] args)
-        {
-            TestQLNS();
         }
     }
 }
