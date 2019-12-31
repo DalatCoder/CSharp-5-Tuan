@@ -67,5 +67,26 @@ namespace QuanLyNhanVien_Bai37
             _danhSachNhanVien.Remove(nv);
             return true;
         }
+
+        private int SoSanhNhanVien(NhanVien nv1, NhanVien nv2)
+        {
+            var kqSS = string.Compare(nv1.TenNhanVien, nv2.TenNhanVien, true);
+
+            // Trung ten, sap xep giam dan theo ma nhan vien
+            if (kqSS == 0)
+            {
+                if (nv1.MaNhanVien < nv2.MaNhanVien)
+                    return 1;
+                if (nv1.MaNhanVien > nv2.MaNhanVien)
+                    return -1;
+                return 0;
+            }
+            return kqSS;
+        }
+
+        public void SapXepTheoTen()
+        {
+            _danhSachNhanVien.Sort(SoSanhNhanVien);
+        }
     }
 }
