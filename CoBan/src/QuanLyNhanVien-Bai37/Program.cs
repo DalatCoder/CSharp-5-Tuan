@@ -31,6 +31,18 @@ namespace QuanLyNhanVien_Bai37
                 System.Console.WriteLine($"Ten phong ban: {phongBan.TenPhongBan}");
                 phongBan.XuatToanBoNhanVien();
             }
+
+            XuatTongLuong();
+        }
+
+        private static void XuatTongLuong()
+        {
+            long sum = 0;
+            foreach (var phongBan in _danhSachPhongBan)
+            {
+                sum += phongBan.TongLuong();
+            }
+            Console.WriteLine($"Tong luong doanh nghiep phai tra: {sum}");
         }
 
         static void Main(string[] args)

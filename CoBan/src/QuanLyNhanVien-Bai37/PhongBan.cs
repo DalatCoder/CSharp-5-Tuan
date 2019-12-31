@@ -88,5 +88,15 @@ namespace QuanLyNhanVien_Bai37
         {
             _danhSachNhanVien.Sort(SoSanhNhanVien);
         }
+
+        public long TongLuong()
+        {
+            long sum = 0;
+            foreach (var nhanVien in this._danhSachNhanVien)
+            {
+                sum += nhanVien.TinhLuong;
+            }
+            return sum;
+        }
     }
 }
