@@ -81,7 +81,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa đơn";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblThanhTien
             // 
@@ -241,7 +240,6 @@
             this.txtTongKH.Size = new System.Drawing.Size(233, 30);
             this.txtTongKH.TabIndex = 1;
             this.txtTongKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTongKH.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtTongKH.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtTongKH_MouseDoubleClick);
             // 
             // label8

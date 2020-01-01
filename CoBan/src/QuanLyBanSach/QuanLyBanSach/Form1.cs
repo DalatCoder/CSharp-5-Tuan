@@ -11,16 +11,6 @@ namespace QuanLyBanSach
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTenKH.Text) || string.IsNullOrWhiteSpace(txtSoLuong.Text))
